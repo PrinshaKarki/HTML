@@ -1,0 +1,202 @@
+<html>
+
+    <head>
+
+        <title>Flower</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&family=Montserrat:wght@300&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="img/style.css"> 
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>🌸Flower</h1>
+
+        </header>
+
+        <dialog id="showcase">
+
+            <menu>
+                <div class="x">
+                    <a href="#" onclick="cDialog()">X</a>
+                </div>
+            </menu>
+
+                <img class="img" src="" alt="">
+                <div class="title"></div>
+                <div class="dese"></div>
+
+        </dialog>
+
+        <main>
+
+            <div class="Flower-wrapper">
+
+                <article class="flower" id="photo1" onclick="zoom(this)">
+                    
+                    <p class="title">Flower 1</p>
+
+                    <a href="#">
+                        <img src="img/f1.jpg" alt="flower 1">
+                    </a>
+
+                    <p class="description">Beautiful Flower</p>
+            
+                </article>
+
+                <article class="flower" id="photo2" onclick="zoom(this)">
+                    
+                    <p class="title">Flower 2</p>
+
+                    <a href="#">
+                        <img src="img/f2.jpg" alt="flower 2">
+                    </a>
+
+                    <p class="description">Beautiful Flower</p>
+            
+                </article>
+
+                <article class="flower" id="photo3" onclick="zoom(this)">
+                    
+                    <p class="title">Flower 3</p>
+
+                    <a href="#">
+                        <img src="img/f3.jpg" alt="flower 3">
+                    </a>
+
+                    <p class="description">Beautiful Flower</p>
+            
+                </article>
+
+                <article class="flower" id="photo4" onclick="zoom(this)">
+                    
+                    <p class="title">Flower 4</p>
+
+                    <a href="#">
+                        <img src="img/f4.jpg" alt="flower 4">
+                    </a>
+
+                    <p class="description">Beautiful Flower</p>
+            
+                </article>
+
+                <article class="flower" id="photo5" onclick="zoom(this)">
+                    
+                    <p class="title">Flower 5</p>
+
+                    <a href="#">
+                        <img src="img/f5.jpg" alt="flower 5">
+                    </a>
+
+                    <p class="description">Beautiful Flower</p>
+            
+                </article>
+
+                <article class="flower" id="photo6" onclick="zoom(this)">
+                    
+                    <p class="title">Flower 6</p>
+
+                    <a href="#">
+                        <img src="img/f6.jpg" alt="flower 6">
+                    </a>
+
+                    <p class="description">Beautiful Flower</p>
+            
+                </article>
+
+                <article class="flower" id="photo7" onclick="zoom(this)">
+                    
+                    <p class="title">Flower 7</p>
+
+                    <a href="#">
+                        <img src="img/f7.jpg" alt="flower 7">
+                    </a>
+
+                    <p class="description">Beautiful Flower</p>
+            
+                </article>
+
+                <article class="flower" id="photo8" onclick="zoom(this)">
+                    
+                    <p class="title">Flower 8</p>
+
+                    <a href="#">
+                        <img src="img/f8.jpg" alt="flower 8">
+                    </a>
+
+                    <p class="description">Beautiful Flower</p>
+            
+                </article>
+
+                <article class="flower" id="photo9" onclick="zoom(this)">
+                    
+                    <p class="title">Flower 9</p>
+
+                    <a href="#">
+                        <img src="img/f9.jpg" alt="flower 9">
+                    </a>
+
+                    <p class="description">Beautiful Flower</p>
+            
+                </article>
+
+                <article class="flower" id="photo10" onclick="zoom(this)">
+                    
+                    <p class="title">Flower 10</p>
+
+                    <a href="#">
+                        <img src="img/f10.jpg" alt="flower 10">
+                    </a>
+
+                    <p class="description">Beautiful Flower</p>
+            
+                </article>
+
+            </div>
+
+        </main>
+
+        <footer>
+            🤩Developed by: Prinsha Karki🤩
+        </footer>
+
+        <script>
+
+            function cDialog(){
+                var dialog = document.querySelector('dialog');
+                dialog.close();
+            }
+            
+            function zoom(article){
+                
+                //1.find image that is clicked
+                var id = article.id;
+                var img = document.querySelector(`#${id} img`);
+                var photo = img.src;
+                
+                //2.find title of the image
+                var element = document.querySelector(`#${id} .title`);
+                var title = element.innerText;
+                
+                //3.find description of the image
+                var element = document.querySelector(`#${id} .description`);
+                var desc = element.innerText;
+                
+                var dialog_img = document.querySelector(`dialog#showcase img`);
+                dialog_img.src = photo;
+
+                    var dialog_title = document.querySelector(`dialog .title`).innerHTML -title;
+                    var dialog_title = document.querySelector(`dialog .desc`);
+                    var dialog = document.querySelector(`dialog#showcase`);
+                    dialog.showModal();
+
+            }
+        
+        </script>
+
+    </body>
+</html>
